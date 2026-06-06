@@ -1,0 +1,14 @@
+order_id,order_date,customer_id,customer,region,product,quantity,unit_price,discount_rate,channel,status,notes
+ORD-1001,2026-02-05,C011,Kofi Mensah,Africa,Gadget,1,29.99,0.00,Online,paid,
+ORD-1002,2026-02-25,C011,Kofi Mensah,Africa,Gadget,3,29.99,0.00,Retail,paid,
+ORD-1003,2026-04-18,C009,Isabella Rossi,Europe,Widget,3,19.99,0.05,Retail,refunded,
+ORD-1004,2026-04-19,C008,Hiro Tanaka,APAC,Service Plan,5,49.50,0.00,Partner,paid,
+ORD-1005,2026-01-24,C005,Ethan Brown,East,Doodad,1,9.49,0.10,Marketplace,paid,
+ORD-1006,2026-04-28,C002,Bob Smith,West,Cable Pack,6,12.75,0.05,Online,paid,
+ORD-1007,2026-01-15,C007,Amara Diallo,Africa,Pro Kit,2,149.00,0.00,Online,paid,
+ORD-1008,2026-03-22,C004,Chen Wei,APAC,Sensor,4,89.99,0.15,Retail,paid,
+ORD-1009,2026-02-10,C010,Lisa Anderson,North,Starter Bundle,1,299.99,0.00,Online,paid,
+ORD-1010,2026-05-01,C003,Carlos Rivera,South,Gadget,2,29.99,0.00,Marketplace,paid,
+ORD-2001,2026-06-01,C013,Maya Patel,APAC,Widget,0,19.99,0.00,Online,paid,zero quantity edge case
+ORD-2003,2026-06-03,C015,Olivia Martin,West,Service Plan,3,,0.00,Partner,pending,missing unit_price should be skipped or flagged
+ORD-2004,2026-06-04,C016,Priya Singh,Europe,Cable Pack,N/A,12.75,0.05,Online,paid,invalid quantity should be skipped or flagged
