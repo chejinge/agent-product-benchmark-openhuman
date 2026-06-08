@@ -1,48 +1,64 @@
-# Agent Product Benchmark - OpenHuman
+# Agent Product Benchmark
 
-> Multi-domain benchmark for evaluating AI agent capabilities in real-world software engineering tasks.
+A comprehensive benchmark suite for evaluating AI agent capabilities on real-world product management and software engineering tasks.
 
 ## Overview
 
-This benchmark evaluates AI agents across five representative product development scenarios:
+This benchmark evaluates AI agents across multiple dimensions:
+- **GitHub Repository Management**: Creating and managing repositories
+- **Data Processing**: CSV file analysis and transformation
+- **Bug Fixing**: Identifying and fixing code issues
+- **SaaS Workflows**: Handling billing, refunds, and customer operations
 
-| # | Task | Domain | Key Skills Tested |
-|---|------|--------|-------------------|
-| 1 | GitHub Repo Creation | DevOps | API usage, file creation, validation |
-| 2 | CSV File Processing | Data Engineering | Data parsing, validation, transformation |
-| 3 | Node.js Bug Fix | Software Engineering | Debugging, code repair, testing |
-| 4 | SaaS Refund Workflow | Backend Business Logic | Workflow orchestration, idempotency, rollback |
-| 5 | SaaS Billing Downgrade | Full-Stack Business Logic | Multi-step transactions, rollback, credit notes |
+## Directory Structure
 
-## Evaluation Criteria
+```
+agent-product-benchmark-openhuman/
+├── README.md                 # This file
+├── rubric/
+│   └── scoring.md           # Evaluation criteria and scoring system
+├── tasks/
+│   ├── github_repo_creation.md
+│   ├── csv_file_processing.md
+│   ├── node_bug_fix.md
+│   ├── saas_refund_workflow.md
+│   └── saas_billing_downgrade.md
+├── results/
+│   └── summary.md           # Benchmark results summary
+└── artifacts/
+    ├── sales_data.csv       # Sample sales data for processing
+    └── node_project.zip     # Sample Node.js project with bugs
+```
 
-Scoring is based on:
-- **Correctness** — Does the output match the expected result?
-- **Autonomy** — How many manual interventions were required?
-- **Tool Utilization** — Are the right tools used in the right order?
-- **Stability** — Is the process repeatable and error-free?
+## Tasks
 
-See [rubric/scoring.md](rubric/scoring.md) for the full scoring rubric.
+### 1. GitHub Repository Creation
+Evaluate agent's ability to create and configure GitHub repositories programmatically.
 
-## Quick Start
+### 2. CSV File Processing
+Test data manipulation skills including filtering, aggregation, and transformation.
+
+### 3. Node.js Bug Fix
+Assess debugging capabilities and code quality improvements.
+
+### 4. SaaS Refund Workflow
+Evaluate understanding of business logic and customer service operations.
+
+### 5. SaaS Billing Downgrade
+Test complex state management and billing system interactions.
+
+## Scoring
+
+See [rubric/scoring.md](rubric/scoring.md) for detailed evaluation criteria.
+
+## Usage
 
 1. Clone this repository
-2. Review task definitions in `tasks/`
-3. Run your agent against each task
+2. Review each task in the `tasks/` directory
+3. Execute tasks using your AI agent
 4. Record results in `results/summary.md`
-
-## Task List
-
-- [GitHub Repo Creation](tasks/github_repo_creation.md)
-- [CSV File Processing](tasks/csv_file_processing.md)
-- [Node.js Bug Fix](tasks/node_bug_fix.md)
-- [SaaS Refund Workflow](tasks/saas_refund_workflow.md)
-- [SaaS Billing Downgrade](tasks/saas_billing_downgrade.md)
-
-## Results
-
-See [results/summary.md](results/summary.md) for agent performance tracking.
+5. Calculate final score using the scoring rubric
 
 ## License
 
-MIT
+MIT License
