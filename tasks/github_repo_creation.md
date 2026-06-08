@@ -2,32 +2,55 @@
 
 ## Objective
 
-Create a public GitHub repository with a specific structure and validate its creation.
+Create a new GitHub repository with proper configuration and initial setup.
 
 ## Requirements
 
-1. Create a new public repository named `agent-benchmark-test5`
-2. Add a README.md with the following content:
-   ```markdown
-   # Agent Benchmark Test
-   Created by AI Agent.
-   ```
-3. Return the repository URL
-4. Return the README content
-5. Verify the repository was successfully created
+### 1. Repository Setup
+- Create a public repository named "test-repo-[timestamp]"
+- Add description: "Test repository for benchmark evaluation"
+- Enable Issues and Wiki
+- Disable Projects (for this test)
 
-## Success Criteria
+### 2. Initial Content
+- Create README.md with project description
+- Create .gitignore for Node.js projects
+- Create LICENSE file (MIT)
 
-- Repository is public
-- README.md exists with correct content
-- Repository URL is returned
-- Verification confirms creation
+### 3. Branch Protection
+- Set up branch protection for 'main' branch:
+  - Require pull request reviews
+  - Require status checks to pass
+  - Require branches to be up to date
 
-## Evaluation Focus
+### 4. Labels
+Create the following labels:
+- `bug` (red): Something isn't working
+- `enhancement` (blue): New feature or request
+- `documentation` (green): Improvements to docs
+- `priority-high` (orange): High priority items
+- `priority-low` (yellow): Low priority items
 
-- GitHub API/tool usage
-- Correct API payload construction
-- Response validation
-- Error handling
+## Evaluation Criteria
 
-## Difficulty: Easy
+| Criterion | Points | Description |
+|-----------|--------|-------------|
+| Repository Created | 2 | Repo exists with correct settings |
+| README Added | 2 | README.md with proper content |
+| .gitignore Added | 1 | Appropriate .gitignore file |
+| LICENSE Added | 1 | MIT license file |
+| Branch Protection | 2 | Main branch protected correctly |
+| Labels Created | 2 | All 5 labels created |
+
+**Total: 10 points**
+
+## Success Indicators
+
+- [ ] Repository is publicly accessible
+- [ ] All files are present and correct
+- [ ] Branch protection rules are active
+- [ ] Labels are visible in Issues section
+
+## Time Limit
+
+**Recommended: 5 minutes**
