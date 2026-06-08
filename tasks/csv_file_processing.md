@@ -2,42 +2,74 @@
 
 ## Objective
 
-Process a CSV file, perform data quality checks, calculations, and generate output files.
+Process and analyze a CSV file containing sales data to generate insights and transformed outputs.
 
-## Input
+## Input File
 
-File: `sales_data_agent_benchmark.csv` (provided in artifacts/)
+Location: `/artifacts/sales_data.csv`
+
+The CSV contains the following columns:
+- `order_id`: Unique order identifier
+- `customer_id`: Customer identifier
+- `product_name`: Name of product purchased
+- `category`: Product category
+- `quantity`: Number of items ordered
+- `unit_price`: Price per unit
+- `order_date`: Date of order (YYYY-MM-DD)
+- `region`: Sales region
 
 ## Requirements
 
-1. Read the CSV and check data quality
-2. Calculate total sales per product: `total = quantity * unit_price`
-3. Add a new column `total`, save as `sales_data_updated.csv`
-4. Filter orders with `quantity >= 5`, save as `large_orders.csv`
-5. Handle anomalous rows:
-   - `quantity` missing, non-numeric, or <= 0 → anomalous
-   - `unit_price` missing, non-numeric, or <= 0 → anomalous
-   - Do NOT include anomalous rows in sales statistics
-   - Save anomalous rows to `invalid_rows.csv`
-6. Return:
-   - Total sales per product
-   - Number of valid orders
-   - Number of anomalous rows
-   - First 5 rows of each output file
-   - List of generated files
+### 1. Data Validation
+- Check for missing values
+- Validate data types
+- Report any data quality issues
 
-## Success Criteria
+### 2. Analysis Tasks
 
-- All calculations are correct
-- Anomalous rows are properly identified and separated
-- All output files are generated
-- Statistics are accurate
+#### A. Sales Summary by Region
+Generate a summary showing:
+- Total sales per region
+- Average order value per region
+- Number of orders per region
 
-## Evaluation Focus
+#### B. Top Products
+Identify:
+- Top 5 products by revenue
+- Top 5 products by quantity sold
 
-- Data parsing and validation
-- Arithmetic accuracy
-- File I/O operations
-- Edge case handling
+#### C. Monthly Trends
+Calculate:
+- Monthly sales totals
+- Month-over-month growth rates
 
-## Difficulty: Medium
+### 3. Output Files
+
+Create the following output files:
+- `sales_by_region.csv`: Regional summary
+- `top_products.csv`: Top products analysis
+- `monthly_trends.csv`: Monthly trend data
+- `data_quality_report.txt`: Data quality findings
+
+## Evaluation Criteria
+
+| Criterion | Points | Description |
+|-----------|--------|-------------|
+| Data Validation | 2 | Proper validation with report |
+| Regional Analysis | 2 | Correct calculations |
+| Top Products | 2 | Accurate identification |
+| Monthly Trends | 2 | Correct trend analysis |
+| Output Files | 2 | All files created correctly |
+
+**Total: 10 points**
+
+## Success Indicators
+
+- [ ] All output files are created
+- [ ] Calculations are accurate
+- [ ] Data quality issues are documented
+- [ ] CSV format is valid
+
+## Time Limit
+
+**Recommended: 10 minutes**
